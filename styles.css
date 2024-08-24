@@ -1,0 +1,566 @@
+@font-face {
+    font-family: 'MiFuenteOTF';
+    src: url('fonts/miFuenteOTF.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Resetea algunos estilos básicos */
+body, h1, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/* Aplica una fuente global y un fondo de página */
+body {
+    margin: 0;
+    background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%);
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo del header */
+header {
+    background: transparent; /* Sin fondo en el header */
+    padding: 0; /* Sin padding en el header */
+}
+
+/* Estilo del botón de menú */
+.menu-toggle {
+    display: none; /* Ocultar por defecto */
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1001; /* Asegúrate de que el botón esté por encima del contenido */
+}
+
+/* Estilo de la navegación */
+nav {
+    background: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    backdrop-filter: blur(10px); /* Efecto de desenfoque */
+    padding: 1rem; /* Espaciado en el navbar */
+    text-align: center; /* Centra el contenido */
+    font-family: 'MiFuenteOTF', sans-serif;
+    transition: background 0.3s ease; /* Transición suave del fondo */
+}
+
+nav ul {
+    list-style: none; /* Elimina los puntos de la lista */
+    padding: 0; /* Elimina el padding por defecto */
+    margin: 0; /* Elimina el margen por defecto */
+}
+
+nav ul li {
+    display: inline; /* Muestra los elementos en línea */
+    margin: 0 15px; /* Espacio entre los elementos de la lista */
+}
+
+nav a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Color del texto */
+    font-weight: 500; /* Peso de la fuente */
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* Estilo para el enlace activo */
+nav a.active {
+    color: #f1c40f; /* Color amarillo para el enlace activo */
+}
+
+/* Estilo para el menú en dispositivos móviles */
+@media (max-width: 900px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Esconder el menú de navegación por defecto */
+    nav#navbar {
+        display: none;
+    }
+
+    /* Mostrar el menú cuando esté activo */
+    nav#navbar.active {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 1rem;
+        text-align: center;
+        z-index: 1000;
+    }
+
+    nav#navbar ul {
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+    nav#navbar ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+/* Espaciado adicional para el contenido al inicio */
+.section {
+    padding-top: 100px; /* Asegura que el contenido no quede detrás del navbar */
+}
+
+/* Estilo para la sección about-me */
+.about-me {
+    text-align: center; /* Centra el texto */
+    margin-top: 2rem; /* Espaciado superior */
+}
+
+.about-me h1 {
+    font-family: 'MiFuenteOTF', sans-serif;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la imagen redonda */
+.about-me img {
+    border-radius: 50%; /* Aplica el efecto redondo */
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+/* Estilo para la descripción */
+.description {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    width: 30%;
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
+
+/* Estilo para resaltar texto */
+.highlight {
+    color: #f1c40f;;
+    font-weight: bold;
+}
+
+/* Estilo para el contenedor de botones */
+.button-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Estilo general de los botones */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px; /* Reducido el padding */
+    margin: 0 8px; /* Reducido el margen */
+    border-radius: 20px; /* Ajustado el radio del borde */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px; /* Reducido el tamaño de fuente */
+    transition: background-color 0.3s ease, color 0.3s ease;
+    max-width: 300px; /* Ajusta este valor según el tamaño máximo que desees para los botones */
+    width: auto; /* Permite que el ancho del botón sea automático, basado en su contenido */
+    margin: 10px; /* Espaciado alrededor del botón */
+    padding: 8px 16px; /* Padding interno del botón */
+}
+
+/* Estilo para el botón al pasar el mouse */
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Estilo específico para el botón de contacto */
+.contact-btn img {
+    margin-right: 6px; /* Reducido el margen del icono */
+}
+
+/* Estilo específico para el botón de LinkedIn */
+.linkedin-btn img {
+    margin-right: 6px; /* Reducido el margen del icono */
+}
+
+.experience-section {
+    padding: 50px;
+    width: 25%;
+    margin: 3% auto 0 auto; /* margin-top: 4% y centrar horizontalmente con auto */
+}
+
+.experience-icon {
+    width: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+h2 {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.timeline {
+    position: relative;
+    margin-left: 20px;
+    padding-left: 20px;
+    border-left: 2px solid #444c56;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+    padding-left: 20px;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -8px;
+    top: 10px;
+    width: 16px;
+    height: 16px;
+    background-color: #f1c40f;
+    border-radius: 50%;
+    border: 2px solid #0d1117;
+}
+
+.timeline-content {
+    margin-left: 20px;
+}
+
+.timeline-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #f1c40f;;
+    margin-bottom: 5px;
+}
+
+.timeline-title span {
+    display: block;
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.more-info {
+    color: #f1c40f;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.more-info:hover {
+    color: #ffffff;
+}
+
+
+.projects-section {
+    max-width: 1400px;
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.project-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    background-color: #161b22;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.project-image {
+    width: 50%;
+    object-fit: cover;
+}
+
+
+.project-details {
+    padding: 20px;
+    width: 60%;
+}
+
+.project-details h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Tag Styles */
+.tag {
+    display: inline-block;
+    background-color: #f1c40f;
+    color: #ffffff;
+    border-radius: 12px;
+    padding: 5px 10px;
+    font-size: 14px;
+    margin-right: 10px;
+    margin-bottom: 10px; /* Add a bit of space below each tag */
+}
+
+/* Project Details Styles */
+.project-details {
+    text-align: center; /* Ensure the text and tags are centered */
+    margin-bottom: 20px;
+}
+
+/* Project Buttons Container */
+.project-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons horizontally */
+    gap: 10px;
+    margin-top: 20px; /* Space between text/tags and buttons */
+}
+
+/* Button Styles */
+.btn {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center; /* Center content within each button */
+}
+
+.btn:hover {
+    background-color: #f1c40f;
+}
+
+.preview-btn {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.preview-btn:hover {
+    background-color: #f1c40f;
+}
+
+.about-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1400px;
+    margin:0 auto;
+    padding: 20px;
+}
+
+.about-content {
+    max-width: 70%;
+}
+
+.about-icon {
+    width: 40px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.about-section h2 {
+    font-size: 32px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.about-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #c9d1d9;
+}
+
+.highlight {
+    color: #f1c40f;
+    font-weight: bold;
+}
+
+.about-image img {
+    width: 250px;
+    border-radius: 15px;
+    transform: rotate(3deg);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    margin-left: 25%;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #161b22;
+    color: #8b949e;
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer nav a {
+    color: #8b949e;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+footer nav a:hover {
+    color: #ffffff;
+}
+
+
+/* Estilos para la versión móvil */
+/* General styles (default for larger screens) */
+
+/* Small devices (phones, less than 600px) */
+@media (max-width: 600px) {
+    body {
+        font-size: 14px; /* Smaller base font size */
+    }
+
+    nav ul li {
+        display: block; /* Stack menu items vertically */
+        margin: 10px 0; /* Space between items */
+    }
+
+    .about-me img {
+        width: 80px; /* Smaller profile image */
+    }
+
+    .description {
+        width: 90%; /* Full width description */
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .btn {
+        width: auto; /* Esto permite que los botones mantengan su tamaño */
+        margin: 10px auto; /* Centra los botones horizontalmente */
+        padding: 8px 16px; /* Puedes ajustar el padding según sea necesario */
+    }
+
+    .button-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; /* Sigue apilando los botones, pero sin ocupar todo el ancho */
+    }
+
+    .experience-section, .projects-section, .about-section {
+        width: 90%; /* Full width sections */
+        padding: 20px; /* Reduced padding */
+    }
+
+    .timeline {
+        margin-left: 10px; /* Adjusted margin for timeline */
+    }
+
+    .project-card {
+        flex-direction: column; /* Stack image and details */
+    }
+
+    .project-image, .project-details {
+        width: 100%; /* Full width for both */
+    }
+
+    .about-content {
+        max-width: 100%; /* Full width content */
+    }
+
+    .about-image img {
+        width: 100%; /* Full width image */
+        margin-left: 0;
+    }
+
+    .skillicons {
+        width: 100%; /* Asegura que los iconos ocupen todo el ancho disponible en pantallas pequeñas */
+    }
+
+}
+
+/* Medium devices (tablets, 600px to 900px) */
+@media (min-width: 600px) and (max-width: 900px) {
+    .description {
+        width: 70%; /* Adjusted description width */
+    }
+
+    .experience-section, .projects-section, .about-section {
+        width: 80%; /* Adjusted section width */
+    }
+
+    .project-card {
+        flex-direction: column; /* Stack image and details */
+    }
+
+    .project-image, .project-details {
+        width: 100%; /* Full width for both */
+    }
+
+    .about-image img {
+        width: 80%; /* Adjusted image size */
+        margin-left: 10%; /* Centered with reduced margin */
+    }
+    .skillicons {
+        width: 80%; /* Ajusta el tamaño para tablets */
+    }
+}
+
+/* Large devices (desktops, 900px and up) */
+@media (min-width: 900px) {
+    body {
+        font-size: 16px; /* Default font size */
+    }
+
+    .description {
+        width: 50%; /* Adjusted description width */
+    }
+
+    .experience-section, .projects-section, .about-section {
+        width: 60%; /* Adjusted section width */
+    }
+
+    .project-card {
+        flex-direction: row; /* Row layout for image and details */
+    }
+
+    .project-image {
+        width: 50%; /* Half width for image */
+    }
+
+    .project-details {
+        width: 50%; /* Half width for details */
+    }
+
+    .about-image img {
+        width: 60%; /* Adjusted image size */
+        margin-left: 20%; /* Centered image */
+    }
+
+    .skillicons {
+        width: 60%; /* Ajusta el tamaño para pantallas más grandes */
+    }
+}

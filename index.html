@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fondo con Gradiente</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button id="menu-toggle" class="menu-toggle">
+            ☰
+        </button>
+        <nav id="navbar">
+            <ul>
+                <li><a href="#inicio">Contacto</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#sobre-mi">Sobre mí</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="inicio" class="about-me section">
+        <img src="https://avatars.githubusercontent.com/escartii" alt="Profile Picture">
+        <h1> Hey, soy Alvaro Escarti</h1>
+        <p class="description"><span class="highlight">Desarollador Web Junior</span> que ama la <span class="highlight">Programación</span> y los nuevos desafíos. Resido en Valencia, España 🇪🇸.</p>
+    </section>
+    
+    <div class="button-container">
+        <a href="mailto:escartidaw@gmail.com" class="btn contact-btn">
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/email.png"/> Contáctame
+        </a>
+        <a href="https://www.linkedin.com/in/%C3%A1lvaro-escart%C3%AD-lamolda-91a652277/" class="btn linkedin-btn">
+            <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png"/> LinkedIn
+        </a>
+    </div>
+
+    <section id="experiencia" class="experience-section section">
+        <h2>💼 Experiencia laboral</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Estudiante DAW <span>IES La Sénia</span></h3>
+                    <p>2023/2025</p>
+                    <p>Tecnologías Aprendidas: HTML, CSS, Java, Javascript, PHP, MySQL, Bootstrap, GitHub, Docker</p>
+                    <p>
+                        <a href="https://skillicons.dev">
+                          <img src="https://skillicons.dev/icons?i=java,javascript,php,mysql,bootstrap,github,docker" />
+                        </a>
+                    </p>
+                    <a href="#" class="more-info">Saber más &gt;</a>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3 class="timeline-title">Estudiante SMX <span>IES La Sénia</span></h3>
+                    <p>2021/2023</p>
+                    <p>Scripting Bash, Powershell, Configuración de redes locales, Sistemas Operativos, Gestión de ficheros, Copias de seguridad.</p>
+                    <p>
+                        <a href="https://skillicons.dev">
+                          <img src="https://skillicons.dev/icons?i=bash,powershell,html,css" />
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="proyectos" class="projects-section section">
+        <h2>🚀 Proyectos</h2>
+        <div class="project-card">
+            <img src="./img/padel.png" alt="Project 1" class="project-image">
+            <div class="project-details">
+                <h3>Padel Paiporta</h3>
+                <div class="tags">
+                    <span class="tag">Java</span>
+                    <span class="tag">MySQL</span>
+                </div>
+                <p>Este proyecto gestiona un club de pádel, ofreciendo funcionalidades completas para el registro de
+                    usuarios, la reserva de pistas y la administración de una tienda en línea. Los usuarios pueden consultar
+                    el ranking de jugadores y el historial de partidos jugados. Además, el sistema está integrado con un BOT
+                    de Telegram que notifica a los usuarios sobre las reservas de pistas, asegurando una comunicación
+                    eficiente y actualizaciones en tiempo real.</p>
+                <div class="project-buttons">
+                    <a href="#" class="btn code-btn">💻 Code</a>
+                    <a href="#" class="btn preview-btn">🔗 Preview</a>
+                </div>
+            </div>
+        </div>
+    
+        <div class="project-card">
+            <img src="./img/qwerty69.png" alt="Project 2" class="project-image">
+            <div class="project-details">
+                <h3>qwerty69</h3>
+                <div class="tags">
+                    <span class="tag">Wordpress</span>
+                    <span class="tag">WooCommerce</span>
+                </div>
+                <p> Este proyecto consiste en una tienda en línea desarrollada con WordPress para la venta de licencias OEM
+                    de Windows. Utilizando un diseño intuitivo y una interfaz amigable, el sitio permite a los usuarios
+                    explorar, seleccionar y comprar licencias de Windows de manera sencilla. Integrado con herramientas de
+                    pago seguras y un sistema de gestión de pedidos eficiente.</p>
+                    <a href="https://qwerty69.es" class="btn preview-btn">🔗 Preview</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre-mi" class="about-section section">
+        <div class="about-content">
+            <h2>📂 Sobre mí</h2>
+            <p>Me llamo Álvaro Escartí pero mis amigos me llaman Escartí. Empecé en la programación cuando tenía 20 años. Actualmente sigo <span class="highlight">aprendiendo cosas nuevas en este mundo maravilloso.</span></p>
+            <p>Además, soy una persona deportista y he jugado varios deportes como fútbol, baloncesto y natación. Actualmente, practico pádel dos veces por semana.</p>
+            
+        </div>
+        <div class="about-image">
+            <img src="https://avatars.githubusercontent.com/escartii" alt="Profile Picture">
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2024 escartii. Casi todos los derechos reservados</p>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav ul li a');
+
+            let currentSection = "";
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                if (pageYOffset >= sectionTop - 60 && pageYOffset < sectionTop + sectionHeight - 60) {
+                    currentSection = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === currentSection) {
+                    link.classList.add('active');
+                }
+            });
+
+            if (window.pageYOffset > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Forzar la activación de la clase `active` después de hacer clic en un enlace
+        document.querySelectorAll('nav ul li a').forEach(link => {
+            link.addEventListener('click', function() {
+                setTimeout(() => {
+                    const sections = document.querySelectorAll('.section');
+                    const navLinks = document.querySelectorAll('nav ul li a');
+
+                    let currentSection = "";
+
+                    sections.forEach(section => {
+                        const sectionTop = section.offsetTop;
+                        const sectionHeight = section.offsetHeight;
+                        if (window.pageYOffset >= sectionTop - 60 && window.pageYOffset < sectionTop + sectionHeight - 60) {
+                            currentSection = section.getAttribute('id');
+                        }
+                    });
+
+                    navLinks.forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href').substring(1) === currentSection) {
+                            link.classList.add('active');
+                        }
+                    });
+                }, 300); // Espera 300ms para asegurarse de que el scroll haya terminado
+            });
+        });
+
+        // Toggle menu visibility
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
