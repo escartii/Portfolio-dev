@@ -35,6 +35,9 @@
         <a href="https://www.linkedin.com/in/%C3%A1lvaro-escart%C3%AD-lamolda-91a652277/" class="btn linkedin-btn">
             <img src="https://img.icons8.com/ios-filled/24/ffffff/linkedin.png"/> LinkedIn
         </a>
+        <a href="https://github.com/escartii" class="btn github-btn">
+            <img src="https://img.icons8.com/material-outlined/24/ffffff/github.png"/> GitHub
+        </a>
     </div>
 
     <section id="experiencia" class="experience-section section">
@@ -88,6 +91,8 @@
                 <div class="project-buttons">
                     <a href="#" class="btn code-btn">💻 Code</a>
                     <a href="#" class="btn preview-btn">🔗 Preview</a>
+                    
+                    
                 </div>
             </div>
         </div>
@@ -114,7 +119,7 @@
         <div class="about-content">
             <h2>📂 Sobre mí</h2>
             <p>Me llamo Álvaro Escartí pero mis amigos me llaman Escartí. Empecé en la programación cuando tenía 20 años. Actualmente sigo <span class="highlight">aprendiendo cosas nuevas en este mundo maravilloso.</span></p>
-            <p>Además, soy una persona deportista y he jugado varios deportes como fútbol, baloncesto y natación. Actualmente, practico pádel dos veces por semana.</p>
+            <p>Además, <span class="highlight">soy una persona deportista</span> y he jugado varios deportes como fútbol, baloncesto y natación. Actualmente, practico pádel dos veces por semana.</p>
             
         </div>
         <div class="about-image">
@@ -125,69 +130,14 @@
     <footer>
         <p>© 2024 escartii. Casi todos los derechos reservados</p>
     </footer>
-
     <script>
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            const sections = document.querySelectorAll('.section');
-            const navLinks = document.querySelectorAll('nav ul li a');
-
-            let currentSection = "";
-
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                if (pageYOffset >= sectionTop - 60 && pageYOffset < sectionTop + sectionHeight - 60) {
-                    currentSection = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href').substring(1) === currentSection) {
-                    link.classList.add('active');
-                }
-            });
-
-            if (window.pageYOffset > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-
-        // Forzar la activación de la clase `active` después de hacer clic en un enlace
-        document.querySelectorAll('nav ul li a').forEach(link => {
-            link.addEventListener('click', function() {
-                setTimeout(() => {
-                    const sections = document.querySelectorAll('.section');
-                    const navLinks = document.querySelectorAll('nav ul li a');
-
-                    let currentSection = "";
-
-                    sections.forEach(section => {
-                        const sectionTop = section.offsetTop;
-                        const sectionHeight = section.offsetHeight;
-                        if (window.pageYOffset >= sectionTop - 60 && window.pageYOffset < sectionTop + sectionHeight - 60) {
-                            currentSection = section.getAttribute('id');
-                        }
-                    });
-
-                    navLinks.forEach(link => {
-                        link.classList.remove('active');
-                        if (link.getAttribute('href').substring(1) === currentSection) {
-                            link.classList.add('active');
-                        }
-                    });
-                }, 300); // Espera 300ms para asegurarse de que el scroll haya terminado
-            });
-        });
-
-        // Toggle menu visibility
+        // Selecciona el botón de menú y el navbar
         const menuToggle = document.getElementById('menu-toggle');
         const navbar = document.getElementById('navbar');
-
-        menuToggle.addEventListener('click', () => {
+    
+        // Agrega un evento de clic al botón de menú
+        menuToggle.addEventListener('click', function() {
+            // Alterna la clase 'active' en el navbar para mostrar u ocultar el menú
             navbar.classList.toggle('active');
         });
     </script>

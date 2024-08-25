@@ -282,29 +282,34 @@ h2 {
 }
 
 .project-card {
-    display: flex;
-    align-items: flex-start;
+    width: 100%; /* Asegúrate de que el contenedor ocupe todo el ancho disponible */
     margin-bottom: 40px;
     background-color: #161b22;
     border-radius: 12px;
     overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Cambia a columna en lugar de fila para apilar la imagen y el contenido */
 }
 
+
 .project-image {
-    width: 50%;
-    object-fit: cover;
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantén la proporción de la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra todo el espacio posible sin distorsionarse */
 }
 
 
 .project-details {
     padding: 20px;
-    width: 60%;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 14px; /* Ajuste del tamaño de la fuente para que el texto se adapte mejor */
 }
 
-.project-details h3 {
-    font-size: 24px;
-    color: #ffffff;
-    margin-bottom: 10px;
+.project-details p {
+    font-size: 14px; /* Reducir el tamaño del texto en la descripción */
+    line-height: 1.5; /* Mejorar la legibilidad reduciendo la altura de la línea */
+    margin-bottom: 10px; /* Reducir el margen inferior */
 }
 
 /* Tag Styles */
@@ -480,11 +485,14 @@ footer nav a:hover {
     }
 
     .project-card {
-        flex-direction: column; /* Stack image and details */
+        flex-direction: column; /* Asegura que el layout sea vertical */
+        margin-bottom: 20px;
     }
 
     .project-image, .project-details {
-        width: 100%; /* Full width for both */
+        font-size: 13px; /* Asegura que el texto sea legible pero no ocupe demasiado espacio */
+        margin-bottom: 8px; /* Reducir el margen para evitar espacios en blanco grandes */
+    }
     }
 
     .about-content {
@@ -496,11 +504,14 @@ footer nav a:hover {
         margin-left: 0;
     }
 
-    .skillicons {
-        width: 100%; /* Asegura que los iconos ocupen todo el ancho disponible en pantallas pequeñas */
+    .timeline-content p a {
+        justify-content: center; /* Centra los íconos en pantallas pequeñas */
     }
 
-}
+    .timeline-content p a img {
+        max-width: 330px; /* Asegúrate de que el tamaño de los iconos no cambie en pantallas pequeñas */
+        margin-bottom: 10px; /* Espacio entre iconos cuando están en columna */
+    }
 
 /* Medium devices (tablets, 600px to 900px) */
 @media (min-width: 600px) and (max-width: 900px) {
@@ -524,8 +535,14 @@ footer nav a:hover {
         width: 80%; /* Adjusted image size */
         margin-left: 10%; /* Centered with reduced margin */
     }
-    .skillicons {
-        width: 80%; /* Ajusta el tamaño para tablets */
+    
+    .timeline-content p a {
+        justify-content: center; /* Centra los iconos en pantallas pequeñas */
+    }
+
+    .timeline-content p a img {
+        width: 50px; /* Ajusta el tamaño de los iconos en pantallas pequeñas */
+        margin-bottom: 10px; /* Añade espacio inferior entre los iconos cuando están en columna */
     }
 }
 
@@ -564,3 +581,4 @@ footer nav a:hover {
         width: 60%; /* Ajusta el tamaño para pantallas más grandes */
     }
 }
+
