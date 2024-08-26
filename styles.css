@@ -11,6 +11,7 @@ body, h1, ul, li {
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden; /* Evita el scroll horizontal */
+    
 }
 
 /* Aplica una fuente global y un fondo de página */
@@ -137,11 +138,11 @@ nav a.active {
 /* Estilo para la descripción */
 .description {
     font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    width: 30%;
-    text-align: center;
-    margin: auto;
     font-size: 18px;
+    max-width: 500px;
+    margin: auto;
+    color: white;
+    text-align: center;
 }
 
 /* Estilo para resaltar texto */
@@ -397,11 +398,6 @@ h2 {
     color: #c9d1d9;
 }
 
-.highlight {
-    color: #f1c40f;
-    font-weight: bold;
-}
-
 .about-image img {
     width: 250px;
     border-radius: 15px;
@@ -509,7 +505,7 @@ footer nav a:hover {
     }
 
     .timeline-content p a img {
-        max-width: 330px; /* Asegúrate de que el tamaño de los iconos no cambie en pantallas pequeñas */
+        max-width: 270px; /* Asegúrate de que el tamaño de los iconos no cambie en pantallas pequeñas */
         margin-bottom: 10px; /* Espacio entre iconos cuando están en columna */
     }
 
@@ -582,3 +578,149 @@ footer nav a:hover {
     }
 }
 
+/* Estilo base para las cometas */
+.comet {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #f1c40f; /* Color amarillo para la cometa */
+    border-radius: 50%;
+    box-shadow: 0 0 10px #f1c40f, 0 0 20px #f1c40f, 0 0 30px #f1c40f;
+    z-index: 1000; /* Asegúrate de que esté por encima del contenido */
+}
+
+/* Animaciones para las cometas */
+@keyframes fall {
+    0% {
+        top: -10%;
+        left: 20%;
+        transform: rotate(45deg);
+    }
+    100% {
+        top: 110%;
+        left: 80%;
+        transform: rotate(45deg);
+    }
+}
+
+@keyframes fall2 {
+    0% {
+        top: -10%;
+        left: 60%;
+        transform: rotate(-45deg);
+    }
+    100% {
+        top: 110%;
+        left: 30%;
+        transform: rotate(-45deg);
+    }
+}
+
+/* Aplicar animación a las cometas */
+#comet1 {
+    animation: fall 4s linear infinite;
+}
+
+#comet2 {
+    animation: fall2 7s linear infinite;
+}
+
+.tweet-card {
+    background-color: #1c1e21;
+    border-radius: 10px;
+    padding: 15px;
+    max-width: 600px;
+    margin: 20px auto;
+    color: #e1e8ed;
+    font-family: Arial, sans-serif;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    margin-bottom: 3%;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+}
+
+.tweet-user-info {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.handle {
+    color: #8899a6;
+    margin-right: 5px;
+}
+
+.time {
+    color: #8899a6;
+}
+
+.tweet-content {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.tweet-footer {
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    margin-top: 10px;
+}
+
+.tweet-icon {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #8899a6;
+}
+
+.tweet-icon img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+/* Estilo base para el botón de like */
+.like-button img {
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+
+.like-button.clicked img {
+    transform: scale(1.2);
+    filter: brightness(0) saturate(100%) invert(27%) sepia(100%) saturate(7494%) hue-rotate(355deg) brightness(109%) contrast(136%);
+}
+
+/* Animación de color rojo */
+.like-button.clicked img {
+    animation: like-animation 0.3s forwards;
+}
+
+@keyframes like-animation {
+    0% {
+        transform: scale(1);
+        filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(323deg) brightness(102%) contrast(102%);
+    }
+    50% {
+        transform: scale(1.4);
+        filter: brightness(0) saturate(100%) invert(37%) sepia(99%) saturate(7452%) hue-rotate(355deg) brightness(108%) contrast(136%);
+    }
+    100% {
+        transform: scale(1.2);
+        filter: brightness(0) saturate(100%) invert(27%) sepia(100%) saturate(7494%) hue-rotate(355deg) brightness(109%) contrast(136%);
+    }
+}
